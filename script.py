@@ -52,7 +52,7 @@ df.head()
 
 
 app = JupyterDash(__name__, external_stylesheets=[dbc.themes.BOOTSTRAP])
-app.title = "Tablero Descriptivo"
+app.title = "Tablero Tendencias"
 server = app.server
 
 SIDEBAR_STYLE = {
@@ -73,7 +73,7 @@ CONTENT_STYLE = {
 
 sidebar = html.Div(
     [
-        html.H2("Tablero Descriptivo", style={'color': '#f4b610', "font-weight": "bold", "font-size": "36px"}),
+        html.H2("Tablero Tendencias", style={'color': '#f4b610', "font-weight": "bold", "font-size": "36px"}),
         html.Hr(style={'color': 'white'}),
         html.H4("Fecha Inicial -> Fecha Final", style={"color": "white", "font-weight": "bold"}),
         dcc.DatePickerRange(id='dates-picker', display_format='DD/MM/YYYY', 
